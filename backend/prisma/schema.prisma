@@ -47,11 +47,3 @@ model ActionItem {
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
 }
-"scripts": {
-  "dev": "tsx watch src/server.ts",
-  "postinstall": "node ./node_modules/.bin/prisma generate",
-  "build": "tsc",
-  "start": "node dist/server.js",
-  "db:migrate": "prisma migrate dev",
-  "db:studio": "prisma studio"
-}
