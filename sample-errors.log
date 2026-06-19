@@ -1,0 +1,14 @@
+2026-06-19 18:50:00 INFO [payment-service] starting up server on port 8080
+2026-06-19 18:51:15 INFO [payment-service] db connection pool initialized
+2026-06-19 18:53:22 WARN [payment-service] slow query detected: SELECT * FROM billing_transactions WHERE status = 'pending' (took 4.2s)
+2026-06-19 18:54:10 INFO [payment-service] receiving checkout request for user_9812
+2026-06-19 18:55:00 ERROR [payment-service] db connection timeout. active connections: 50/50. pool exhausted.
+2026-06-19 18:55:02 ERROR [payment-service] db connection timeout. active connections: 50/50. pool exhausted.
+2026-06-19 18:55:05 ERROR [payment-service] db connection timeout. active connections: 50/50. pool exhausted.
+2026-06-19 18:55:06 FATAL [payment-service] uncaught exception: Cannot acquire database connection. Thread exiting.
+2026-06-19 18:55:10 WARN [api-gateway] payment-service failed healthcheck, removing from service discovery routing pool.
+2026-06-19 18:55:15 ERROR [api-gateway] gateway timeout: 504 bad gateway routing to /v1/charge
+2026-06-19 18:55:20 ERROR [api-gateway] gateway timeout: 504 bad gateway routing to /v1/charge
+2026-06-19 18:55:25 ERROR [api-gateway] gateway timeout: 504 bad gateway routing to /v1/charge
+2026-06-19 18:56:00 INFO [payment-service] restart requested by orchestrator
+2026-06-19 18:56:05 INFO [payment-service] starting up server on port 8080

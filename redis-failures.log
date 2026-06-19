@@ -1,0 +1,11 @@
+2026-06-19 18:50:00 INFO [cache-service] starting cache-service workers
+2026-06-19 18:51:30 INFO [cache-service] connected to redis cluster at redis-prod-01.internal
+2026-06-19 18:52:12 INFO [cache-service] processing cache lookup for session_771
+2026-06-19 18:53:01 WARN [cache-service] redis latency spikes detected: command GET took 245ms
+2026-06-19 18:54:55 ERROR [cache-service] Redis connection lost. Reconnecting in 1000ms...
+2026-06-19 18:54:56 ERROR [cache-service] Redis connection lost. Reconnecting in 2000ms...
+2026-06-19 18:54:58 ERROR [cache-service] Redis connection lost. Reconnecting in 4000ms...
+2026-06-19 18:55:00 ERROR [cache-service] Connection timed out: redis-prod-01.internal:6379
+2026-06-19 18:55:02 FATAL [cache-service] failed to establish redis connection: MAX_RETRY_EXCEEDED
+2026-06-19 18:55:03 WARN [web-app] cache-service connection failed. falling back to direct db queries.
+2026-06-19 18:55:10 ERROR [web-app] DB deadlock error while trying to fetch sessions under high traffic volume.
