@@ -23,16 +23,16 @@ export async function createIncident(payload: IncidentPayload): Promise<string> 
   if (payload.repoOwner) form.append("repoOwner", payload.repoOwner);
   if (payload.repoName) form.append("repoName", payload.repoName);
   if (payload.logFile) form.append("logFile", payload.logFile);
-  const res = await api.post("/incidents", form);
+  const res = await api.post("/api/incidents", form);
   return res.data.incidentId;
 }
 
 export async function pollReport(incidentId: string): Promise<any> {
-  const res = await api.get(`/incidents/${incidentId}/report`);
+  const res = await api.get(`/api/incidents/${incidentId}/report`);
   return res.data;
 }
 
 export async function listIncidents(): Promise<any[]> {
-  const res = await api.get("/incidents");
+  const res = await api.get("/api/incidents");
   return res.data;
 }
